@@ -4,7 +4,7 @@ You might be wondering why my name is "YI" instead of "LEE." Honestly... I have 
 
 ## 🧑‍💻 Currently Learning
 - 🌱 Git & GitHub
-- Android Development (using Kotlin)
+- Android Development (using Java)
 - Data Structures with C language
 
 ## 💡 Future Career Goals
@@ -33,7 +33,7 @@ None for now, but stay tuned! I'll be adding some exciting projects here soon.
 I'm just starting, and I look forward to building up some awesome projects and experiences soon!
 
 ## 📫 Get in Touch
-- Email: [suheon927@icloud.com](mailto:suheon927@icloud.com)
+- Email: [suheon777@icloud.com](mailto:suheon777@icloud.com)
 
 ## ⚡ Fun Fact
 I might not have all the answers, but I sure know how to make learning fun and exciting! Let's grow together! 🌱✨
