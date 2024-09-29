@@ -38,6 +38,6 @@ I'm just starting, and I look forward to building up some awesome projects and e
 ## ⚡ Fun Fact
 I might not have all the answers, but I sure know how to make learning fun and exciting! Let's grow together! 🌱✨
 
-![Yisuheon's GitHub stats](https://github-readme-stats.vercel.app/api?username=YISUHEON&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=YISUHEON&layout=compact&theme=radical)
-![trophy](https://github-profile-trophy.vercel.app/?username=YISUHEON)
+![suheon927's GitHub stats](https://github-readme-stats.vercel.app/api?username=suheon927&show_icons=true&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suheon927&layout=compact&theme=radical)
+![trophy](https://github-profile-trophy.vercel.app/?username=suheon927)
