@@ -2,7 +2,7 @@
 
 You might be wondering why my name is "YI" instead of "LEE." Honestly... I have no idea either, so please don't ask! 😂
 
-While my name might be a mystery, one thing that’s crystal clear is my passion for learning and growth. I believe that true progress comes from pushing yourself, especially when things get tough. I may not have all the answers right now, but I’m committed to working hard, staying curious, and learning something new every day—no matter how challenging it gets. Growth happens when we face difficulties head-on and strive to become better.
+배움과 성장은 힘들고 어려운 상황에서도 스스로를 밀어붙일 때 이루어진다고 믿습니다. 항상 성실하게 끊임없이 노력하고, 끊임없이 세상을 탐구하는 자세로, 매일 새로운 것을 배우는 데 최선을 다하고 있습니다. 성장은 어려움을 마주하고 더 나아지려는 마음가짐에서 시작된다고 생각합니다. 
 
 Let’s grow together! 🌱✨
 
@@ -14,18 +14,18 @@ Let’s grow together! 🌱✨
 ## 🗺️ My Learning Journey
 
 - **Next Destination:**  
-  **Back-End Development** with Java, focusing on **API design** and **server configuration**. I’m eager to explore the foundational elements of building scalable and efficient systems. 🚀
+  **Back-End Development** with Java, focusing on **API design** and **server configuration**. 확장 가능하고 효율적인 시스템 구축의 기본 요소에 대해 공부하고 싶습니다. 🚀
 
 - **Current Stop:**  
-  **Data Structures** and **Android Programming**. Right now, I’m mastering core concepts in C language data structures while building mobile applications with Java in Android Studio. These skills are the backbone of my programming journey.
+  **Data Structures** and **Android Programming**. 현재 저는 C 언어를 사용한 데이터 구조의 핵심 개념과 응용에 대해 공부하는 동시에 Android Studio에서 Java로 모바일 애플리케이션을 구축하는 공부를 하고 있습니다.
 
 - **Roadblocks:**  
-  The **C language algorithms** have proven to be a challenging obstacle on this path. But, just like any roadblock, I know persistence and dedication will help me push through and come out stronger on the other side.
+The **C language algorithms**는 지금으로서는 저의 여정에서 가장 어려운 도전 과제이지만 반드시 극복해야 하는 것이기도 합니다. **끈기**와 **노력**으로 이 도전 과제를 이겨내고 더 강해지겠습니다!
 
 - **Tools in My Backpack:**  
   Git, Java, C, Android Studio, and an endless curiosity for learning!
 
-Every stop in this journey brings me closer to becoming the skilled developer I aspire to be. I embrace every challenge as part of the adventure!
+이 여정의 모든 단계는 제가 꿈꾸는 '지속가능한' 개발자가 되는 데 한 걸음 더 가까워지게 해주는 것들입니다. 저는 **'모든 도전'** 을 최선을 다해서 임하겠습니다!
 
 ## 🔭 Key Experience
 - **Members of the 2nd Stackup**  
@@ -34,7 +34,7 @@ Every stop in this journey brings me closer to becoming the skilled developer I 
   Currently participating in a project-based AI program, where I'm working on real-world AI problems, including traffic analysis, drone imagery, and autonomous driving technologies.
 
 ## 💡 Future Career Goals
-While my exact career path is still taking shape 🛤️, I’m passionate about exploring the fields of **Artificial Intelligence** and **Big Data**. 🤖 Through various projects and learning experiences, I aim to gradually refine and clarify my professional direction. 🚀 I believe that by actively engaging in new opportunities 🌟, I will discover the areas where I can make the most meaningful impact. 💡 
+제 진로는 아직 구체적으로 정해지지 않았지만, **인공지능(AI)** 과 **빅데이터** 분야에 대해 관심을 가지고 있습니다. 🤖 그렇기 때문에 다양한 프로젝트와 학습 경험을 통해, 앞으로 제 진로를 점차 구체화하고 명확히 해나갈 계획입니다. 🚀 새로운 기회들에 적극적으로 도전하면서 🌟 제가 가장 의미 있는 기여를 할 수 있는 분야를 찾아가겠습니다! 💡
 
 ## 🛠️ Tech Stack
 
