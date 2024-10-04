@@ -11,6 +11,22 @@ Let’s grow together! 🌱✨
 - 🤖 Android Development (Java)
 - 🔧 Data Structures (C language)
 
+## 🗺️ My Learning Journey
+
+- **Next Destination:**  
+  **Back-End Development** with Java, focusing on **API design** and **server configuration**. I’m eager to explore the foundational elements of building scalable and efficient systems. 🚀
+
+- **Current Stop:**  
+  **Data Structures** and **Android Programming**. Right now, I’m mastering core concepts in C language data structures while building mobile applications with Java in Android Studio. These skills are the backbone of my programming journey.
+
+- **Roadblocks:**  
+  The **C language algorithms** have proven to be a challenging obstacle on this path. But, just like any roadblock, I know persistence and dedication will help me push through and come out stronger on the other side.
+
+- **Tools in My Backpack:**  
+  Git, Java, C, Android Studio, and an endless curiosity for learning!
+
+Every stop in this journey brings me closer to becoming the skilled developer I aspire to be. I embrace every challenge as part of the adventure!
+
 ## 💡 Future Career Goals
 While my exact career path is still taking shape, I’m passionate about exploring the fields of **Artificial Intelligence** and **Big Data**. Through various projects and learning experiences, I aim to gradually refine and clarify my professional direction. I believe that by actively engaging in new opportunities, I will discover the areas where I can make the most meaningful impact. 🚀
 
