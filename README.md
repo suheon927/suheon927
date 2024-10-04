@@ -2,13 +2,17 @@
 
 You might be wondering why my name is "YI" instead of "LEE." Honestly... I have no idea either, so please don't ask! 😂
 
+While my name might be a mystery, one thing that’s crystal clear is my passion for learning and growth. I believe that true progress comes from pushing yourself, especially when things get tough. I may not have all the answers right now, but I’m committed to working hard, staying curious, and learning something new every day—no matter how challenging it gets. Growth happens when we face difficulties head-on and strive to become better.
+
+Let’s grow together! 🌱✨
+
 ## 🧑‍💻 Currently Learning
 - 🌱 Git & GitHub for version control
 - 🤖 Android Development (Java)
 - 🔧 Data Structures (C language)
 
 ## 💡 Future Career Goals
-I'm a passionate student diving deep into **Artificial Intelligence** and **Big Data**. My dream is to become a professional in these fields and use my knowledge to drive innovation in tech! 🚀
+While my exact career path is still taking shape, I’m passionate about exploring the fields of **Artificial Intelligence** and **Big Data**. Through various projects and learning experiences, I aim to gradually refine and clarify my professional direction. I believe that by actively engaging in new opportunities, I will discover the areas where I can make the most meaningful impact. 🚀
 
 ## 🔭 Key Experience
 - **Members of the 2nd Stackup**  
