@@ -11,6 +11,12 @@ Let’s grow together! 🌱✨
 - 🤖 Android Development (Java)
 - 🔧 Data Structures (C language)
 
+## 🔭 Key Experience
+- **Members of the 2nd Stackup**  
+  앞으로 다양한 프로젝트에 참여하면서 여러 프로그램을 활용한 실무 역량을 키울 예정입니다. 특히, 팀 활동을 통해 협업 능력을 강화하고, 실질적인 문제 해결 능력을 발전시킬 것입니다!
+- **ICT COG Academy**   
+  AI를 중심으로 한 프로젝트 기반 학습 프로그램에 참여하고 있으며, 앞으로 **교통 분석**, **드론 영상 처리**, **자율주행** 등 다양한 실전 문제를 다루는 수업을 통해 AI 모델 개발을 배울 예정입니다.
+  
 ## 🗺️ My Learning Journey
 
 - **Next Destination:**  
@@ -27,14 +33,8 @@ The **C language algorithms**는 지금으로서는 저의 여정에서 가장 �
 
 이 여정의 모든 단계는 제가 꿈꾸는 '지속가능한' 개발자가 되는 데 한 걸음 더 가까워지게 해주는 것들입니다. 저는 **'모든 도전'** 을 최선을 다해서 임하겠습니다!
 
-## 🔭 Key Experience
-- **Members of the 2nd Stackup**  
-  Gaining hands-on experience and expanding my skills through this innovative community.
-- **ICT COG Academy**  
-  Currently participating in a project-based AI program, where I'm working on real-world AI problems, including traffic analysis, drone imagery, and autonomous driving technologies.
-
 ## 💡 Future Career Goals
-제 진로는 아직 구체적으로 정해지지 않았지만, **인공지능(AI)** 과 **빅데이터** 분야에 대해 관심을 가지고 있습니다. 🤖 그렇기 때문에 다양한 프로젝트와 학습 경험을 통해, 앞으로 제 진로를 점차 구체화하고 명확히 해나갈 계획입니다. 🚀 새로운 기회들에 적극적으로 도전하면서 🌟 제가 가장 의미 있는 기여를 할 수 있는 분야를 찾아가겠습니다! 💡
+제 진로는 아직 구체화되지 않았지만, **인공지능(AI)** 과 **빅데이터** 분야에 대해 큰 관심을 가지고 있습니다. 🤖 그렇기 때문에 다양한 프로젝트와 학습 경험을 통해, 앞으로 제 진로를 점차 구체화하고 명확히 해나갈 계획입니다. 🚀 새로운 기회들에 적극적으로 도전하면서 🌟 제가 가장 의미있는 기여를 할 수 있는 분야를 찾아가겠습니다! 💡
 
 ## 🛠️ Tech Stack
 
