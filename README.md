@@ -54,7 +54,7 @@ The **C language algorithms**는 지금으로서는 저의 여정에서 가장 �
 
 ## 📫 Get in Touch
 - Email: [suheon777@icloud.com](mailto:suheon777@icloud.com)
-- Notion: [My Notion Portfolio](https://organized-olivine-d86.notion.site/11573099573e8045bec2c186c84ba43d?pvs=4)
+- Notion: [My Notion Portfolio](https://suheon927.notion.site/11573099573e8045bec2c186c84ba43d?pvs=4)
 
 ## ⚡ Fun Fact
 I might not have all the answers yet, but I’m always eager to learn and grow. Let’s explore tech together! 🌱✨
