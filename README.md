@@ -3,15 +3,18 @@
 You might be wondering why my name is "YI" instead of "LEE." Honestly... I have no idea either, so please don't ask! 😂
 
 ## 🧑‍💻 Currently Learning
-- 🌱 Git & GitHub
-- Android Development (using Java)
-- Data Structures with C language
+- 🌱 Git & GitHub for version control
+- 🤖 Android Development (Java)
+- 🔧 Data Structures (C language)
 
 ## 💡 Future Career Goals
-I'm currently a student, but my passion lies in Artificial Intelligence and Big Data. I aim to become a professional in these fields and make meaningful contributions to the world of tech. 🚀
+I'm a passionate student diving deep into **Artificial Intelligence** and **Big Data**. My dream is to become a professional in these fields and use my knowledge to drive innovation in tech! 🚀
 
-## 🎯 Ongoing Projects
-None for now, but stay tuned! I'll be adding some exciting projects here soon.
+## 🔭 Key Experience
+- **StackUp 2nd Generation Member**  
+  Gaining hands-on experience and expanding my skills through this innovative community.
+- **ICT COG Academy**  
+  Currently participating in a project-based AI program, where I'm working on real-world AI problems, including traffic analysis, drone imagery, and autonomous driving technologies.
 
 ## 🛠️ Tech Stack
 
@@ -24,19 +27,17 @@ None for now, but stay tuned! I'll be adding some exciting projects here soon.
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=JavaScript&logoColor=black&style=for-the-badge)
 ![HTML](https://img.shields.io/badge/-HTML-E34F26?logo=HTML5&logoColor=white&style=for-the-badge)
 
-### Cross Platform & etc
+### Cross Platform & Tools
 ![Android](https://img.shields.io/badge/-Android-3DDC84?logo=Android&logoColor=white&style=for-the-badge)
 ![Git](https://img.shields.io/badge/-Git-F05032?logo=Git&logoColor=white&style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=GitHub&logoColor=white&style=for-the-badge)
 
-## 🔭 Key Experience
-I'm just starting, and I look forward to building up some awesome projects and experiences soon!
-
 ## 📫 Get in Touch
 - Email: [suheon777@icloud.com](mailto:suheon777@icloud.com)
+- Notion: [My Notion Portfolio](https://www.notion.so/11573099573e8045bec2c186c84ba43d?pvs=4)
 
 ## ⚡ Fun Fact
-I might not have all the answers, but I sure know how to make learning fun and exciting! Let's grow together! 🌱✨
+I might not have all the answers yet, but I’m always eager to learn and grow. Let’s explore tech together! 🌱✨
 
 ## 📊 GitHub Stats
 ![suheon927's GitHub stats](https://github-readme-stats.vercel.app/api?username=suheon927&show_icons=true&theme=radical)
