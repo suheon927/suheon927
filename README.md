@@ -27,14 +27,14 @@ Let’s grow together! 🌱✨
 
 Every stop in this journey brings me closer to becoming the skilled developer I aspire to be. I embrace every challenge as part of the adventure!
 
-## 💡 Future Career Goals
-While my exact career path is still taking shape 🛤️, I’m passionate about exploring the fields of **Artificial Intelligence** and **Big Data**. 🤖 Through various projects and learning experiences, I aim to gradually refine and clarify my professional direction. 🚀 I believe that by actively engaging in new opportunities 🌟, I will discover the areas where I can make the most meaningful impact. 💡 
-
 ## 🔭 Key Experience
 - **Members of the 2nd Stackup**  
   Gaining hands-on experience and expanding my skills through this innovative community.
 - **ICT COG Academy**  
   Currently participating in a project-based AI program, where I'm working on real-world AI problems, including traffic analysis, drone imagery, and autonomous driving technologies.
+
+## 💡 Future Career Goals
+While my exact career path is still taking shape 🛤️, I’m passionate about exploring the fields of **Artificial Intelligence** and **Big Data**. 🤖 Through various projects and learning experiences, I aim to gradually refine and clarify my professional direction. 🚀 I believe that by actively engaging in new opportunities 🌟, I will discover the areas where I can make the most meaningful impact. 💡 
 
 ## 🛠️ Tech Stack
 
