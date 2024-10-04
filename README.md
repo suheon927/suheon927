@@ -19,16 +19,16 @@ Let’s grow together! 🌱✨
   
 ## 🗺️ My Learning Journey
 
-- **Next Destination:**  
+- **Next Destination:** ✈️
   **Back-End Development** with Java, focusing on **API design** and **server configuration**. 확장 가능하고 효율적인 시스템 구축의 기본 요소에 대해 공부하고 싶습니다. 🚀
 
-- **Current Stop:**  
+- **Current Stop:** 🚏
   **Data Structures** and **Android Programming**. 현재 저는 C 언어를 사용한 데이터 구조의 핵심 개념과 응용에 대해 공부하는 동시에 Android Studio에서 Java로 모바일 애플리케이션을 구축하는 공부를 하고 있습니다.
 
-- **Roadblocks:**  
+- **Roadblocks:** 🪨
 The **C language algorithms**는 지금으로서는 저의 여정에서 가장 어려운 도전 과제이지만 반드시 극복해야 하는 것이기도 합니다. **끈기**와 **노력**으로 이 도전 과제를 이겨내고 더 강해지겠습니다!
 
-- **Tools in My Backpack:**  
+- **Tools in My Backpack:** 🎒
   Git, Java, C, Android Studio, and an endless curiosity for learning!
 
 이 여정의 모든 단계는 제가 꿈꾸는 '지속가능한' 개발자가 되는 데 한 걸음 더 가까워지게 해주는 것들입니다. 저는 **'모든 도전'** 을 최선을 다해서 임하겠습니다!
