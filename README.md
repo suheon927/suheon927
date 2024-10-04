@@ -11,7 +11,7 @@ You might be wondering why my name is "YI" instead of "LEE." Honestly... I have 
 I'm a passionate student diving deep into **Artificial Intelligence** and **Big Data**. My dream is to become a professional in these fields and use my knowledge to drive innovation in tech! 🚀
 
 ## 🔭 Key Experience
-- **StackUp 2nd Generation Member**  
+- **Members of the 2nd Stackup**  
   Gaining hands-on experience and expanding my skills through this innovative community.
 - **ICT COG Academy**  
   Currently participating in a project-based AI program, where I'm working on real-world AI problems, including traffic analysis, drone imagery, and autonomous driving technologies.
