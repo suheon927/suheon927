@@ -6,15 +6,21 @@ You might be wondering why my name is "YI" instead of "LEE." Honestly... I have 
 
 Let’s grow together! 🌱✨
 
+---
+
 ## 🧑‍💻 Currently Learning
 - 🌱 Git & GitHub for version control
 - 🤖 Android Development (Java)
 - 🔧 Data Structures (C language)
 
+---
+
 ## 🔭 Key Experience
 - **Members of the 2nd Stackup**  
   앞으로 다양한 프로젝트에 참여하면서 다양한 역량을 키워나가고 싶습니다. 특히, 팀 활동을 통해 협업 능력을 키우고, 실질적인 문제 해결 능력을 발전시킬 것입니다!
-  
+
+---
+
 ## 🗺️ My Learning Journey
 
 - **Next Destination:** ✈️
@@ -31,8 +37,12 @@ The **C language algorithms**는 지금으로서는 저의 여정에서 가장 �
 
 이 여정의 모든 단계는 제가 꿈꾸는 '지속가능한' 개발자가 되는 데 한 걸음 더 가까워지게 해주는 것들입니다. 저는 **'모든 도전'** 을 최선을 다해서 임하겠습니다!
 
+---
+
 ## 💡 Future Career Goals
 제 진로는 아직 구체화되지 않았지만, **인공지능(AI)** 과 **빅데이터** 분야에 대해 큰 관심을 가지고 있습니다. 🤖 그렇기 때문에 다양한 프로젝트와 학습 경험을 통해, 앞으로 제 진로를 점차 구체화하고 명확히 해나갈 계획입니다. 🚀 새로운 기회들에 적극적으로 도전하면서 🌟 제가 가장 의미있는 기여를 할 수 있는 분야를 찾아가겠습니다! 💡
+
+---
 
 ## 🛠️ Tech Stack
 
@@ -50,12 +60,18 @@ The **C language algorithms**는 지금으로서는 저의 여정에서 가장 �
 ![Git](https://img.shields.io/badge/-Git-F05032?logo=Git&logoColor=white&style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=GitHub&logoColor=white&style=for-the-badge)
 
+---
+
 ## 📫 Get in Touch
 - Email: [suheon777@icloud.com](mailto:suheon777@icloud.com)
 - Notion: [My Notion Portfolio](https://suheon927.notion.site/11573099573e8045bec2c186c84ba43d?pvs=4)
 
+---
+
 ## ⚡ Fun Fact
 I might not have all the answers yet, but I’m always eager to learn and grow. Let’s explore tech together! 🌱✨
+
+---
 
 ## 📊 GitHub Stats
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suheon927&layout=compact&theme=radical)
