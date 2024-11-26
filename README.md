@@ -61,4 +61,3 @@ I might not have all the answers yet, but I’m always eager to learn and grow. 
 
 ## 📊 GitHub Stats
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suheon927&layout=compact&theme=radical)
-![trophy](https://github-profile-trophy.vercel.app/?username=suheon927)
