@@ -60,6 +60,5 @@ The **C language algorithms**는 지금으로서는 저의 여정에서 가장 �
 I might not have all the answers yet, but I’m always eager to learn and grow. Let’s explore tech together! 🌱✨
 
 ## 📊 GitHub Stats
-![suheon927's GitHub stats](https://github-readme-stats.vercel.app/api?username=suheon927&show_icons=true&theme=radical)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suheon927&layout=compact&theme=radical)
 ![trophy](https://github-profile-trophy.vercel.app/?username=suheon927)
