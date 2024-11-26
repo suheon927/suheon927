@@ -14,8 +14,6 @@ Let’s grow together! 🌱✨
 ## 🔭 Key Experience
 - **Members of the 2nd Stackup**  
   앞으로 다양한 프로젝트에 참여하면서 다양한 역량을 키워나가고 싶습니다. 특히, 팀 활동을 통해 협업 능력을 키우고, 실질적인 문제 해결 능력을 발전시킬 것입니다!
-- **Project Manager for ChainSaw (체인소우) Digital Forensic Project**
-  Led a virtual forensic investigation, enhancing project management and problem-solving skills through hands-on cyber incident analysis.
   
 ## 🗺️ My Learning Journey
 
