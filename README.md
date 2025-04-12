@@ -23,11 +23,11 @@ Let’s grow together! 🌱✨
 
 - **2024 Gyeongju Regional Problem-Solving Hackathon** 🥈  
   Awarded the **Grand Prize (2nd Overall Place)**: *President of Gyeongbuk ICT Convergence Industry Promotion Association Award*  
-  → [Project Page](https://github.com/Dongguk-Developer/2024hackathon_null)  
+  → [2024hackathon_null](https://github.com/Dongguk-Developer/2024hackathon_null)  
   Developed a backend system for booking and managing tourism services for visitors in Gyeongju.
 
 - **Stack Snapshot Project**  
-  → [Project Page](https://github.com/mjgwon24/stack-snapshot-back)  
+  → [stack-snapshot](https://github.com/mjgwon24/stack-snapshot-back)  
   Developed an API that allows users to download their photos via QR code in a web platform inspired by "photo booths."
 
 ---
