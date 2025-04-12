@@ -24,7 +24,8 @@ Let’s grow together! 🌱✨
 - **2024 Gyeongju Regional Problem-Solving Hackathon** 🥈  
   Awarded the **Grand Prize (2nd Overall Place)**: *President of Gyeongbuk ICT Convergence Industry Promotion Association Award*  
   → [2024hackathon_null](https://github.com/Dongguk-Developer/2024hackathon_null)  
-  Developed a backend system for booking and managing tourism services for visitors in Gyeongju.
+  Developed a backend system for booking and managing tourism services for visitors in Gyeongju.  
+  → [View Award Certificate](https://ibb.co/svXCRMY)
 
 - **Stack Snapshot Project**  
   → [stack-snapshot](https://github.com/mjgwon24/stack-snapshot-back)  
