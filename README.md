@@ -1,91 +1,75 @@
-# Hello, I'm YISUHEON! 👋
+# Yi Suheon · 이수헌
 
-You might be wondering why my name is "YI" instead of "LEE." Honestly... I have no idea either, so please don't ask! 😂
+Software developer building and shipping iOS apps and the services behind them.
 
-I believe that true learning and growth happen when we push ourselves even in tough situations. That's why I always strive to work diligently and explore the world with curiosity, learning something new every day.
+I independently planned, designed, developed, and released **three App Store apps**: **UP-Dream**, **UP-Dream Admin**, and **Naerim**. My work spans native SwiftUI apps, React Native, shared backend APIs, and persistent data models.
 
-Let’s grow together! 🌱✨
+[Portfolio](https://yisuheon.dev) · [App Store](https://apps.apple.com/us/developer/suheon-yi/id6797694037) · [Email](mailto:suheon777@icloud.com)
 
----
+<details>
+<summary>日本語のプロフィール</summary>
 
-## 🧑‍💻 Currently Learning
-- 🌱 Digital Signal Processing
-- 🤖 Artificial Intelligence
-- 💡 Algorithms & Data Structures
+iOSアプリと、それを支えるバックエンドを開発しているYi Suheon（이수헌）です。コミュニティ向けの「UP-Dream」と管理者用アプリ、コーヒー記録アプリ「Naerim」の企画・デザイン・開発からApp Storeでの公開まで、一人で手がけました。東京都市大学に1年間交換留学し、日本でエンジニアとして働くことを目指しています。
 
----
+</details>
 
-## 🔭 Key Experience
+## Released apps
 
-- **Member of StackUp 2nd (2023)**  
-  I had a great learning experience throughout the program, covering various topics and improving my skills.  
-  → Check out my Notion Programming page for various study materials! [My Notion](https://suheon927.notion.site/11573099573e8045bec2c186c84ba43d?pvs=4)
+| Product | Implementation | Engineering focus | Links |
+| --- | --- | --- | --- |
+| **UP-Dream** — community member app | TypeScript · React Native · Expo Router | Member workflows, shared APIs, role-aware access, notifications | [App Store](https://apps.apple.com/kr/app/id6797694035) · [Technical overview](docs/updream.md) |
+| **UP-Dream Admin** — community operations app | Swift · SwiftUI | Member approvals, attendance, reservations, and administrator workflows | [App Store](https://apps.apple.com/kr/app/id6810673532) · [Technical overview](docs/updream.md) |
+| **Naerim · 내림** — coffee brewing journal | Swift · SwiftUI · SwiftData | Recipe snapshots, recoverable brewing sessions, local persistence, widgets and App Intents | [App Store](https://apps.apple.com/kr/app/id6808134502) · [Technical overview](docs/naerim.md) |
 
-- **2024 Gyeongju Regional Problem-Solving Hackathon** 🥈  
-  Awarded the **Grand Prize (2nd Overall Place)**: *President of Gyeongbuk ICT Convergence Industry Promotion Association Award*  
-  → [2024hackathon_null](https://github.com/Dongguk-Developer/2024hackathon_null)  
-  Developed a backend system for booking and managing tourism services for visitors in Gyeongju.  
-  → [View Award Certificate](https://ibb.co/svXCRMYp)
-  
-- **Stack Snapshot Project**  
-  → [stack-snapshot](https://github.com/mjgwon24/stack-snapshot-back)  
-  Developed an API that allows users to download their photos via QR code in a web platform inspired by "photo booths."
+UP-Dream's member and administrator apps form one service. Naerim supports iPhone and iPad, with Korean, English, and Japanese localization.
 
----
+## Technologies in context
 
-## 🛠️ Tech Stack
+| Language / area | Technologies | Where I used them |
+| --- | --- | --- |
+| **Swift** | SwiftUI | Native Naerim and UP-Dream Admin apps; Expo native integrations in UP-Dream |
+| **Swift persistence & system integration** | Observation, SwiftData, WidgetKit, App Intents | Naerim's records, brewing entry points, and widgets |
+| **TypeScript** | React Native, Expo, Expo Router | UP-Dream member app |
+| **TypeScript / SQL** | React, vinext/Vite, Supabase PostgreSQL | UP-Dream web administration and shared backend APIs |
+| **Deployment & verification** | AWS ECS Fargate, GitHub Actions, XCTest | UP-Dream deployment/check configuration; native app regression tests |
+| **Java** | Spring Boot, JPA, MySQL | Stack Snapshot team backend |
+| **Python** | Django | Gyeongju hackathon team backend |
 
-### Back-End Development
-![Java](https://img.shields.io/badge/-Java-007396?logo=Java&logoColor=white&style=for-the-badge)
-![Spring Boot](https://img.shields.io/badge/-Spring%20Boot-6DB33F?logo=Spring-Boot&logoColor=white&style=for-the-badge)
-![Python](https://img.shields.io/badge/-Python-3776AB?logo=Python&logoColor=white&style=for-the-badge)
-![FastAPI](https://img.shields.io/badge/-FastAPI-009688?logo=FastAPI&logoColor=white&style=for-the-badge)
-![Flask](https://img.shields.io/badge/-Flask-000000?logo=Flask&logoColor=white&style=for-the-badge)
-![Django](https://img.shields.io/badge/-Django-092E20?logo=Django&logoColor=white&style=for-the-badge)
+**Earlier learning projects:** [Java / Android](https://github.com/suheon927/AndroidStudioProjects), [C](https://github.com/suheon927/MiniGames), and [Python / perceptrons](https://github.com/suheon927/PerceptronPractice).
 
-### Systems Programming
-![C](https://img.shields.io/badge/-C-A8B9CC?logo=C&logoColor=white&style=for-the-badge)
-![Unix](https://img.shields.io/badge/-Unix-000000?logo=Unix&logoColor=white&style=for-the-badge)
+## Architecture & implementation notes
 
-### Mobile Development
-![Android](https://img.shields.io/badge/-Android-3DDC84?logo=Android&logoColor=white&style=for-the-badge)
+```mermaid
+flowchart LR
+    Member["UP-Dream member: TypeScript / React Native"] --> API["Shared TypeScript API"]
+    Admin["UP-Dream Admin: Swift / SwiftUI"] --> API
+    API --> PG["Supabase PostgreSQL"]
+    Naerim["Naerim: Swift / SwiftUI"] --> Local["SwiftData persistence"]
+```
 
-### Front-End Development
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=JavaScript&logoColor=black&style=for-the-badge)
-![HTML](https://img.shields.io/badge/-HTML-E34F26?logo=HTML5&logoColor=white&style=for-the-badge)
+- **[UP-Dream: member app, admin app, and shared backend](docs/updream.md)** — system boundaries, project layout, authorization, and update delivery.
+- **[Naerim: a native brewing workflow](docs/naerim.md)** — value types and persistence, immutable recipe snapshots, and session recovery.
 
-### Tools & Version Control
-![Git](https://img.shields.io/badge/-Git-F05032?logo=Git&logoColor=white&style=for-the-badge)
-![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=GitHub&logoColor=white&style=for-the-badge)
+The technical notes include diagrams, selected source paths, implementation decisions, and verification coverage.
 
----
+## Team projects
 
-## 🗺️ My Learning Journey
+### Stack Snapshot · backend contributor
 
-- **Next Destination:** ✈️  
-  I plan to dive deeper into **Internet technologies** and **signal processing** to build more efficient and connected systems.
+Built the **QR generation and photo-download functionality** for a six-person team's event photo-booth service. The team used Java, Spring Boot, JPA, and MySQL, with Swagger and Nginx in the service stack.
 
-- **Current Stop:** 🚏  
-  I am currently focusing on **Algorithms & Data Structures** to strengthen my problem-solving skills and technical foundation.
+[Repository](https://github.com/mjgwon24/stack-snapshot-back) · [My QR/download implementation](https://github.com/mjgwon24/stack-snapshot-back/commit/88965a2bbc6e419ca10b7fc5641d73bf693046c4)
 
-- **Roadblocks:** 🪨  
-  Algorithms and data structures in C language present the most challenging parts of my journey, but I am determined to overcome them with persistence and effort!
+### Gyeongju Regional Problem-Solving Hackathon · 2024
 
-- **Tools in My Backpack:** 🎒  
-  Git, Java, Python, C, Android Studio, endless curiosity for learning!
+Backend developer in **Team Null**, which received **2nd place overall**. The tourism experience service combined reservations with photo-layer collection and composition. I worked on the Python/Django backend.
 
----
+[Repository](https://github.com/Dongguk-Developer/2024hackathon_null) · [Award certificate](https://ibb.co/svXCRMYp)
 
-## 📫 Get in Touch
-- Email: [suheon777@icloud.com](mailto:suheon777@icloud.com)
-- Notion: [My Notion Portfolio](https://suheon927.notion.site/11573099573e8045bec2c186c84ba43d?pvs=4)
+## Education & international experience
 
----
+- **Dongguk University WISE** — Computer Engineering.
+- **Tokyo City University** — one-year exchange in the Faculty of Information Technology. This experience shaped my goal of working as a software developer in Japan.
+- **StackUp, 2nd cohort · 2023** — collaborative learning and programming practice.
 
-## ⚡ Fun Fact
-I might not have all the answers yet, but I’m always eager to learn and grow. Let’s explore tech together! 🌱✨
-
----
-
-## 📊 GitHub Stats
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suheon927&layout=compact&theme=radical)
+[Study archive](https://suheon927.notion.site/11573099573e8045bec2c186c84ba43d?pvs=4) · [Personal portfolio](https://yisuheon.dev)
