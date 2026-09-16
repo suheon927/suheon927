@@ -17,8 +17,8 @@ iOSアプリと、それを支えるバックエンドを開発しているYi Su
 
 | Product | Implementation | Engineering focus | Links |
 | --- | --- | --- | --- |
-| **UP-Dream** — community member app | TypeScript · React Native · Expo Router | Member workflows, shared APIs, role-aware access, notifications | [App Store](https://apps.apple.com/kr/app/id6797694035) · [Technical overview](docs/updream.md) |
-| **UP-Dream Admin** — community operations app | Swift · SwiftUI | Member approvals, attendance, reservations, and administrator workflows | [App Store](https://apps.apple.com/kr/app/id6810673532) · [Technical overview](docs/updream.md) |
+| **UP-Dream** — community member app | TypeScript · React Native · Expo Router | Session recovery, screen caching, role-aware access, notifications | [App Store](https://apps.apple.com/kr/app/id6797694035) · [Technical overview](docs/updream.md) |
+| **UP-Dream Admin** — community operations app | Swift · SwiftUI | Role-based workflows, session isolation, and conflict-aware attendance edits | [App Store](https://apps.apple.com/kr/app/id6810673532) · [Technical overview](docs/updream.md) |
 | **Naerim · 내림** — coffee brewing journal | Swift · SwiftUI · SwiftData | Recipe snapshots, recoverable brewing sessions, local persistence, widgets and App Intents | [App Store](https://apps.apple.com/kr/app/id6808134502) · [Technical overview](docs/naerim.md) |
 
 UP-Dream's member and administrator apps form one service. Naerim supports iPhone and iPad, with Korean, English, and Japanese localization.
@@ -50,7 +50,7 @@ flowchart LR
 - **[UP-Dream: member app, admin app, and shared backend](docs/updream.md)** — system boundaries, project layout, authorization, and update delivery.
 - **[Naerim: a native brewing workflow](docs/naerim.md)** — value types and persistence, immutable recipe snapshots, and session recovery.
 
-The technical notes include diagrams, selected source paths, implementation decisions, and verification coverage.
+The technical notes connect product problems to implementation decisions, selected source paths, and dated verification results. They distinguish released products from later development work.
 
 ## Team projects
 

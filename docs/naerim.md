@@ -6,9 +6,20 @@ Naerim helps people record coffee brews, keep recipes, and compare the condition
 I independently built and released the app, owning the product and its implementation.
 This case study focuses on the data boundaries and recovery behavior behind its native interface.
 
-> Technical snapshot: source reviewed on September 15, 2026.
+> Technical snapshot: source and development records reviewed on September 17, 2026.
 > The App Store link identifies the released product; reviewed source may include later work.
 > Source and test paths below identify implementation areas without linking unpublished source.
+
+## Product context: recording the conditions behind a cup
+
+My existing **Coffee Lab** workspace in Notion keeps beans and equipment alongside brew
+records: dose, water, temperature, time, tasting notes, and score. It also brings recent
+brews and highly rated recipes back into view. That personal workflow provides concrete
+context for Naerim's record-and-compare features.
+
+For the app, the key engineering requirement is keeping those comparisons meaningful:
+a past brew needs the recipe and equipment values used at the time, even when the catalog
+changes later. The snapshot and recovery boundaries below address that requirement.
 
 ## Technology and responsibilities
 
@@ -149,6 +160,25 @@ Implementation: `Naerim/Infrastructure/Application/ApplicationStore.swift`,
 Related tests: `NaerimTests/ApplicationStorePersistenceTests.swift`,
 `NaerimTests/PersistenceRepositoryTests.swift`, and `NaerimTests/DataBoundaryRegressionTests.swift`.
 
+## 4. Reject invalid quantities without losing the recipe draft
+
+**Reproduced failure.** The September 10 release QA record documents a crash at numeric
+boundaries: summed step durations could overflow, and very large floating-point values
+could fail during conversion to integers.
+
+**Change.** Use explicit overflow checks and exact integer conversion. Water scaling builds
+a replacement draft only after every amount validates, preserving the original draft if
+an adjustment fails.
+
+**Recorded result.** All **7 quantity-boundary tests** passed in the result bundle below.
+They cover overflow, non-finite values, rounding residuals, and failed adjustments.
+These tests are part of the reported total.
+
+Implementation: `Naerim/Domain/Recipes/RecipeModels.swift` and
+`Naerim/Domain/Recipes/RecipeDraft.swift`.
+Tests: `NaerimTests/RecipeDraftQuantityTests.swift`.
+Release record: `docs/RELEASE_QA_2026-09-10.md`.
+
 ## Verification coverage
 
 The reviewed source includes tests for disk reopen compatibility, historical snapshot retention,
@@ -159,4 +189,27 @@ Japanese, and large accessibility text scenarios.
 
 Examples: `NaerimTests/BrewExportTests.swift`, `NaerimTests/LocalizationTests.swift`,
 and `NaerimUITests/LocalizationFlowTests.swift`.
-Verification scope: source-level review of the listed test definitions on 2026-09-15.
+### Recorded execution inspected · 2026-09-17
+
+The Xcode result bundle from **2026-09-10** was inspected directly with `xcresulttool`:
+
+| Environment | Result |
+| --- | --- |
+| iPhone 17 Pro simulator · iOS 26.5 | **300 passed; 1 skipped; 0 failed** |
+| Breakdown of passed tests in this bundle | **297 unit tests + 3 UI tests** |
+
+The bundle includes **24 session-coordinator tests and 9 session-file tests**, all passed.
+They exercise recovery, failed writes, and retry behavior described above; these are subsets
+of the 300 passed tests, not additional runs.
+
+The run's source manifest contains 126 app and test files. Their SHA-256 hashes still
+match the current checkout at `d91e3e7`, connecting the recorded result to the reviewed source.
+
+This is a recorded execution, not a new run on September 17. The release verification
+record also tracks UI scenarios across other runs; those counts are not added here.
+The skipped test explicitly initializes a development CloudKit schema and requires an
+opt-in signed iCloud test host. This run is not evidence of live cross-device sync.
+
+Evidence paths in the application repository:
+`local-artifacts/one-cup-experiment/results/final-validation.xcresult` and
+`local-artifacts/one-cup-experiment/verification.json`.
