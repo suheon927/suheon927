@@ -114,6 +114,10 @@ Recovered sessions can save their captured values even when a referenced master 
 Editing a recipe does not redefine a past execution, and deleting a catalog entry does not
 require discarding the snapshot already held by an unfinished session.
 
+**Trade-off.** Capturing values duplicates some catalog data and requires snapshot-format
+compatibility. In return, a historical record does not depend on the current state of a
+mutable recipe or equipment entry.
+
 Implementation: `Naerim/Domain/Recipes/RecipeDraft.swift`,
 `Naerim/Domain/Brewing/BrewModels.swift`, and
 `Naerim/Infrastructure/Persistence/PersistenceRepository.swift`.
@@ -134,6 +138,10 @@ and content so a retry can recognize an already stored result.
 **Effect.** Recovery and retry become explicit states. A failed database write can retain the
 session for retry; a leftover checkpoint after successful storage can be reconciled.
 Conflicting data is surfaced instead of silently replacing a different record.
+
+**Trade-off.** Durable checkpoints add file I/O and recovery states alongside the database.
+Saving the result and removing its checkpoint are separate operations, so retries need
+explicit reconciliation when one succeeds and the other fails.
 
 Implementation: `Naerim/Features/Brewing/PrototypeSession.swift`
 (contains `BrewSessionCoordinator`), `Naerim/Infrastructure/SessionRecovery/SessionFileStore.swift`,
@@ -177,6 +185,10 @@ These tests are part of the reported total.
 Implementation: `Naerim/Domain/Recipes/RecipeModels.swift` and
 `Naerim/Domain/Recipes/RecipeDraft.swift`.
 Tests: `NaerimTests/RecipeDraftQuantityTests.swift`.
+
+**Public implementation:** [standalone Swift package](https://github.com/suheon927/naerim-recipe-validation)
+with focused tests and documented simplifications. It extracts this quantity-validation
+case so the implementation can be inspected without the full application.
 Release record: `docs/RELEASE_QA_2026-09-10.md`.
 
 ## Verification coverage

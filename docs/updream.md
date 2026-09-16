@@ -90,6 +90,10 @@ current source handles related workflow and reliability concerns.
 
 Source anchors: `app/api/_request-context.ts`, `admin-ios/UPDreamAdmin/App/AdminShell.swift`, `admin-ios/UPDreamAdmin/Core/APIClient.swift`, `admin-ios/UPDreamAdmin/Core/KeychainStore.swift`.
 
+**Trade-off:** device-only Keychain storage, an ephemeral URLSession, and memory-only screen
+state reduce retained session and management data. Relaunching the app requires fresh
+authorized reads rather than reopening a persistent offline administration cache.
+
 **Operational example — development work dated September 15:** attendance analysis keeps
 unmarked records separate from absences and requires sufficient observation history before
 classifying a change. Weekly summaries preserve that distinction. The selected native
@@ -119,6 +123,10 @@ Source anchor: `app/api/attendance/_atomic-write.ts`.
 **Why it matters:** users can retry a temporary startup failure, and ordinary refresh failures can preserve useful screen state. An authorization-boundary change follows a stricter discard path.
 
 Source anchors: `mobile/src/lib/sessionBootstrap.ts`, `mobile/src/context/AuthContext.tsx`, `mobile/src/lib/screenDataCache.ts`, `mobile/src/realtime/contract.ts`, `mobile/src/realtime/hybridConnection.ts`.
+
+**Trade-off:** change signals keep domain records out of broadcast messages and let each
+refetch apply current API permissions. The cost is another request after a relevant change;
+cache invalidations are coalesced and spread over a short jitter window to limit redundant work.
 
 ### 4. Member app: fix a crash during Android's first layout
 
