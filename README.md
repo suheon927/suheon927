@@ -15,35 +15,13 @@ iOSアプリと、それを支えるバックエンドを開発しているYi Su
 
 ## Released apps
 
-<table>
-<tr>
-<th>UP-Dream</th>
-<th>UP-Dream Admin</th>
-<th>Naerim · 내림</th>
-</tr>
-<tr>
-<td align="center"><a href="assets/screenshots/updream-growth.png"><img src="assets/screenshots/updream-growth.png" width="180" alt="UP-Dream member app: monthly gratitude and reflection records using demo data"></a></td>
-<td align="center"><a href="assets/screenshots/updream-admin-overview.png"><img src="assets/screenshots/updream-admin-overview.png" width="180" alt="UP-Dream administrator app: operations overview with synthetic counts"></a></td>
-<td align="center"><a href="assets/screenshots/naerim-brewing.png"><img src="assets/screenshots/naerim-brewing.png" width="180" alt="Naerim: an active coffee brew with a timer and pouring plan using a sample recipe"></a></td>
-</tr>
-<tr>
-<td>Community participation, attendance, and personal reflection.</td>
-<td>Membership approvals, attendance, and daily operations.</td>
-<td>Record brewing conditions and compare one cup with the next.</td>
-</tr>
-<tr>
-<td>TypeScript · React Native · Expo</td>
-<td>Swift · SwiftUI</td>
-<td>Swift · SwiftUI · SwiftData</td>
-</tr>
-<tr>
-<td><a href="https://apps.apple.com/kr/app/id6797694035">App Store</a> · <a href="docs/updream.md">Technical overview</a></td>
-<td><a href="https://apps.apple.com/kr/app/id6810673532">App Store</a> · <a href="docs/updream.md">Technical overview</a></td>
-<td><a href="https://apps.apple.com/kr/app/id6808134502">App Store</a> · <a href="docs/naerim.md">Technical overview</a></td>
-</tr>
-</table>
+| App | Purpose | Core stack | Explore |
+| --- | --- | --- | --- |
+| **UP-Dream** | Community participation, attendance, Bible reading, and personal reflection | TypeScript · React Native · Expo | [Technical overview](docs/updream.md#member-app) · [App Store](https://apps.apple.com/kr/app/id6797694035) |
+| **UP-Dream Admin** | Membership approvals, attendance, and daily operations | Swift · SwiftUI | [Technical overview](docs/updream.md#administrator-app) · [App Store](https://apps.apple.com/kr/app/id6810673532) |
+| **Naerim · 내림** | Record brewing conditions and compare one cup with the next | Swift · SwiftUI · SwiftData | [Technical overview](docs/naerim.md) · [App Store](https://apps.apple.com/kr/app/id6808134502) |
 
-Development screenshots use synthetic demo data. [Capture details](assets/screenshots/README.md).
+Each technical overview includes app screens, workflow explanations, implementation decisions, and how I used AI during development.
 UP-Dream's member and administrator apps form one service. Naerim supports iPhone and iPad, with Korean, English, and Japanese localization.
 
 ## Selected implementation

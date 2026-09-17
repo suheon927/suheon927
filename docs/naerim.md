@@ -10,6 +10,61 @@ This case study focuses on the data boundaries and recovery behavior behind its 
 > The App Store link identifies the released product; reviewed source may include later work.
 > Source and test paths below identify implementation areas without linking unpublished source.
 
+[App walkthrough](#app-walkthrough) · [AI-assisted development](#how-i-used-ai) · [Architecture](#architecture) · [Implementation cases](#1-keep-historical-brews-independent-of-editable-recipes) · [Verification](#verification-coverage)
+
+## App walkthrough
+
+Naerim follows a repeatable loop: prepare a cup, follow the pouring plan, and keep the
+conditions with the result. These screens connect that workflow to the data decisions below.
+
+<table>
+<tr><th>1. Prepare</th><th>2. Brew</th><th>3. Review</th></tr>
+<tr>
+<td align="center" valign="top"><a href="../assets/screenshots/naerim-preparation.png"><img src="../assets/screenshots/naerim-preparation.png" width="220" alt="Brew preparation with sample beans, recipe, grinder setting, dose, water target, and temperature"></a></td>
+<td align="center" valign="top"><a href="../assets/screenshots/naerim-brewing.png"><img src="../assets/screenshots/naerim-brewing.png" width="220" alt="Active brew with elapsed time, current pouring target, and a planned water graph"></a></td>
+<td align="center" valign="top"><a href="../assets/screenshots/naerim-history.png"><img src="../assets/screenshots/naerim-history.png" width="220" alt="Searchable brew history with sample equipment, conditions, ratings, and setting changes"></a></td>
+</tr>
+<tr>
+<td>Reuse previous conditions and adjust the variables that changed for this cup.</td>
+<td>Follow the current pour target while the session tracks elapsed time and progress.</td>
+<td>Find previous brews and inspect the conditions and ratings recorded for each cup.</td>
+</tr>
+</table>
+
+Simulator captures from September 5–7, 2026, using synthetic test data in development builds.
+Click an image for the full-size view. [Capture details](../assets/screenshots/README.md).
+
+### From screen behavior to implementation
+
+| Step | User-facing behavior | Engineering responsibility |
+| --- | --- | --- |
+| Prepare | Start from previous settings and change individual values | Editable value drafts; optional inputs remain distinct from zero; recipe quantities are validated before replacement |
+| Brew | Keep timing and the pouring plan together | A shared session coordinator, monotonic elapsed time, and durable recovery checkpoints |
+| Review | Compare the conditions behind past cups | Historical snapshots preserve the recipe and equipment values used at the time |
+
+The [public Swift example](https://github.com/suheon927/naerim-recipe-validation) isolates
+the quantity-validation part of preparation. The persistence and recovery cases below
+explain what happens after a draft becomes an active brew or a saved record.
+
+## How I used AI
+
+I used **Codex** to assist development in bounded implementation tasks. One recorded example
+is the brew-entry refinement: I requested a simpler flow built around individually selected
+metrics, and the implementation let users enter measurements step by step during
+preparation, repeat brewing, and result entry. The work preserved the distinction between missing values and zero, between
+target and actual water amounts, and between a new draft and a previous result.
+
+I define the product behavior, decide which changes to accept, and own release decisions.
+Repository instructions give coding agents explicit scope and verification requirements;
+builds, XCTest results, UI checks, and source snapshots provide evidence for the resulting changes.
+The [recorded verification](#verification-coverage) below identifies what was actually exercised.
+
+AI tools support the development process. Brewing and record comparison use native Swift
+data and calculation logic.
+
+Development records: `docs/IMPLEMENTATION_STATUS.md` (September 7 input-flow update),
+`docs/DEVELOPMENT.md`.
+
 ## Product context: recording the conditions behind a cup
 
 My existing **Coffee Lab** workspace in Notion keeps beans and equipment alongside brew

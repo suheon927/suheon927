@@ -6,6 +6,114 @@ I independently planned, designed, developed, and released the member and admini
 
 **Technical snapshot:** source, development records, and selected tests reviewed on 2026-09-17. These notes describe the implementation in the repository; individual App Store builds may contain an earlier subset of it.
 
+[Member app](#member-app) · [Administrator app](#administrator-app) · [Bible permissions](#bible-text-permissions-and-66-book-delivery) · [Architecture](#system-structure) · [Engineering decisions](#engineering-decisions) · [Verification](#verification-in-the-repository)
+
+## Member app
+
+The member app connects everyday community activity with personal reflection and Bible reading.
+These screens show monthly personal records and navigation into the licensed Bible text.
+
+<table>
+<tr><th>Monthly reflection</th><th>Bible reading entry</th></tr>
+<tr>
+<td align="center" valign="top"><a href="../assets/screenshots/updream-growth.png"><img src="../assets/screenshots/updream-growth.png" width="260" alt="Monthly gratitude and QT reflection records using synthetic demo data"></a></td>
+<td align="center" valign="top"><a href="../assets/screenshots/updream-bible.png"><img src="../assets/screenshots/updream-bible.png" width="260" alt="Bible entry screen with book and chapter navigation, bookmarks, and a Korean Bible Society copyright notice"></a></td>
+</tr>
+<tr>
+<td>Review gratitude and Bible-reflection (QT) records by date, then open the relevant recording flow.</td>
+<td>Choose a book and chapter, return to a bookmark, and open copyright information.</td>
+</tr>
+</table>
+
+Development captures from August 22, 2026, using demo data. Click an image for the full-size view.
+[Capture details](../assets/screenshots/README.md).
+
+### From screen behavior to implementation
+
+- **Reflection records:** monthly displays make past entries visible while the screen-data layer handles refreshes, request deduplication, and account-scope changes. The [session and refresh case](#3-member-app-recover-sessions-and-refresh-screen-data-safely) explains those boundaries.
+- **Bible reading:** book metadata is bundled with the client; the selected text is fetched through an authenticated API. Bookmarks, highlights, and personal notes are kept separate from the shared Bible text.
+- **Account changes:** a new account must not inherit the previous member's private records or downloaded text. Session invalidation and account-specific storage are part of the feature behavior.
+
+### How I used AI — member app
+
+I used **Claude Code and Codex** for scoped frontend work and integration, and **ImageGen**
+for static illustrations. In the September 6 general-member interface update, Claude Code
+prepared initial changes to the growth and mission screens. Codex handled the home screen,
+shared theme, assets, calendar and reading-flow refinements, and integration checks.
+The Bible viewer also began with a Claude-produced handoff that was integrated with the
+application's routes and authenticated content delivery.
+
+ImageGen produced the garden and mission-letter artwork. Labels, buttons, completion marks,
+and member content remain native React Native elements layered around the artwork. The
+illustrations are bundled assets; the app does not generate them during a member's session.
+The screenshots above predate that general-member visual update and show the youth-member workflow.
+
+I set the product requirements and release scope. AI-assisted changes are checked against
+the application's data and permission rules, with verification recorded separately from
+implementation. Source records: `docs/guides/GENERAL_MEMBER_FAITH_GARDEN_2026_09_06.md`,
+`mobile/assets/faith-garden/README.md`, and `deliverables/bible-viewer/HANDOFF.md`.
+
+## Administrator app
+
+The native administrator app brings daily operations to iPhone and iPad. Its screens expose
+the work available to the signed-in administrator, while the shared API enforces permissions.
+
+<table>
+<tr><th>iPhone operations overview</th><th>iPad operations overview</th></tr>
+<tr>
+<td align="center" valign="top"><a href="../assets/screenshots/updream-admin-overview.png"><img src="../assets/screenshots/updream-admin-overview.png" width="220" alt="Native iPhone administrator overview with synthetic membership and attendance counts"></a></td>
+<td align="center" valign="top"><a href="../assets/screenshots/updream-admin-ipad.png"><img src="../assets/screenshots/updream-admin-ipad.png" width="330" alt="Native iPad administrator overview using synthetic screen-rendering fixtures"></a></td>
+</tr>
+</table>
+
+September 10, 2026 simulator captures. All displayed counts are synthetic test fixtures,
+not usage or impact metrics. [Capture details](../assets/screenshots/README.md).
+
+### From screen behavior to implementation
+
+- **Operational overview:** outstanding approvals and attendance summaries provide entry points into administrator workflows.
+- **Role-specific actions:** the interface uses server-provided capabilities to expose permitted actions. The server rechecks authorization when a request is made.
+- **Session changes:** isolated Keychain storage and request-generation checks prevent an earlier session's response from restoring stale management state. See the [native session case](#1-admin-app-keep-sessions-and-permitted-actions-consistent).
+
+### How I used AI — administrator app
+
+I used AI assistance for the **SwiftUI frontend**, including screen implementation and
+presentation. I defined the operational workflows and interface requirements.
+
+## Bible text permissions and 66-book delivery
+
+I handled the copyright review and the work to secure permission for the **Korean 개역개정
+translation** used in UP-Dream. The project checklist records that use permission was
+confirmed; the supporting documents are retained privately. The translation's copyright
+remains with the **Korean Bible Society**.
+
+The reader supports **all 66 books** through the approved-member service. This was both a
+release-preparation task and an implementation constraint: the permission scope had to be
+reflected in who could read the text, how it was delivered, and where the
+copyright notice appeared. The Society publishes [licensing guidance for Bible applications](https://www.bskorea.or.kr/bbs/content.php?co_id=subpage2_3_4_3).
+
+<details>
+<summary>Permission work, copyright notices, and delivery controls</summary>
+
+| Area | Work completed or implemented |
+| --- | --- |
+| Permission process | Reviewed the translation's rights and handled the work to obtain use permission for the service. Kept permission evidence in restricted storage. |
+| Copyright notices | Added the Korean Bible Society attribution and permission notice to the Bible entry screen and chapter endings, with fuller information in the app's copyright screen. |
+| Distribution boundary | Kept the full text out of the app bundle and public repository. The current backend reads it from private AWS S3 storage. |
+| Member access | The text API checks authentication and approved-member status before reading content. Unauthorized requests are rejected. |
+| Corpus integrity | Validate the 66-book corpus against expected file sizes, hashes, and book/chapter/verse counts. The September 7 deployment record reports 66 of 66 books ready in both production and review environments. |
+| Device cache | Use account-specific, backup-excluded temporary storage, with a four-hour lifetime and cleanup on logout, account changes, and cold starts. |
+
+Permission records and the licensed text remain in restricted storage. The public portfolio
+documents the process and the application's delivery controls.
+
+Implementation anchors: `mobile/app/copyright.tsx`, `mobile/src/lib/bible/bibleText.ts`,
+`mobile/src/lib/bible/bibleTextCache.ts`, `app/api/bible/text/[bookCode]/route.ts`, and
+`app/api/bible/text/_manifest.ts`.
+Release record: `docs/guides/RELEASE_1_2_1_LATEST_2026_09_07.md`.
+
+</details>
+
 ## Stack and responsibilities
 
 | Layer | Technologies | Responsibility |
