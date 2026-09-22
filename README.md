@@ -24,6 +24,19 @@ iOSアプリと、それを支えるバックエンドを開発しているYi Su
 Each technical overview includes app screens, workflow explanations, implementation decisions, and how I used AI during development.
 UP-Dream's member and administrator apps form one service. Naerim supports iPhone and iPad, with Korean, English, and Japanese localization.
 
+## Try the apps
+
+Install each app from the App Store. On the sign-in screen, choose **데모 계정으로 로그인** (Sign in with a demo account), then use the matching credentials below.
+
+| App | Demo ID | Demo password | Start here |
+| --- | --- | --- | --- |
+| [UP-Dream](https://apps.apple.com/kr/app/id6797694035) | `updream.app.review` | `ZYQw0tEyqiWOTSZ80k1gwDsXyTVSLaux` | Explore the home screen, gratitude entries, and reflection history. [Demo guide](https://yisuheon.dev/en/projects/updream/#demo) |
+| [UP-Dream Admin](https://apps.apple.com/kr/app/id6810673532) | `updream.admin.review` | `iSClZj1ZKzt5DKBDqmQsLN6lbIBFh3Vu` | Explore the operations overview, member directory, and attendance views. [Demo guide](https://yisuheon.dev/en/projects/updream-admin/#demo) |
+
+The demo uses shared sample data. Other visitors may change it, and changes may remain. Please do not enter real names, contact details, private prayer requests, or other personal information.
+
+[한국어 안내](https://yisuheon.dev/ko/projects/updream/#demo) · [日本語の案内](https://yisuheon.dev/ja/projects/updream/#demo) · [English instructions](https://yisuheon.dev/en/projects/updream/#demo)
+
 ## Selected implementation
 
 **[Recipe quantity validation in Swift](https://github.com/suheon927/naerim-recipe-validation)** — a standalone example adapted from Naerim. It checks numeric boundaries and scales a pouring plan while preserving the original draft when validation fails.
