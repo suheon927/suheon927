@@ -1,16 +1,31 @@
-# UP-Dream · Community apps & shared backend
+# UP-Dream · Member app, admin web, admin app & shared backend
 
-[Profile](../README.md) · [Member app](https://apps.apple.com/kr/app/id6797694035) · [Administrator app](https://apps.apple.com/kr/app/id6810673532)
+[Profile](../README.md) · Member app: [App Store](https://apps.apple.com/kr/app/id6797694035) · [Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth) · Administrator app: [App Store](https://apps.apple.com/kr/app/id6810673532) · [Service website](https://updream.church)
 
-I independently planned, designed, developed, and released the member and administrator apps for a church community. The service brings together membership approval, attendance, announcements, schedules, and room reservations. A web administration interface and both mobile clients share the backend.
+I independently planned, designed, developed, released, and operate UP-Dream for a church youth group. It replaced a split setup — room bookings on a shared Naver calendar and communication in a KakaoTalk open chat — with one service for membership approval, attendance, announcements, schedules, room reservations, prayer requests, and Bible reading.
+
+The service has four surfaces: a **member app** on iOS and Android, an **admin web** console, a **native admin app** for iPhone and iPad, and a **shared TypeScript API** behind all three.
+
+| Surface | Platform | Used for | Stack |
+| --- | --- | --- | --- |
+| Member app | iOS · Android | Everyday community activity, reflection, Bible reading | TypeScript · React Native · Expo |
+| Admin web | Browser | Desk work: approvals, member records, account merges | TypeScript · React |
+| Admin app | iPhone · iPad | On-site work such as Sunday attendance | Swift · SwiftUI |
+| Shared API | AWS ECS Fargate | Sessions, permissions, business rules for every client | TypeScript · Supabase PostgreSQL · S3 |
+
+### Usage
+
+Between 1 December 2025 and 3 November 2026 (48 Sunday youth services), **56 of the 114 people who attended at least once have a completed account (49.1%)**. Among regular attendees — 24 or more of the 48 services — **41 of 61 use the app (67.2%)**. Sign-up requires roster verification and administrator approval.
+
+<sub>Counts are unique people, excluding pastors and test accounts, checked against completed sign-ups (required details and terms accepted). Attendance comes from records saved in the app; unrecorded weeks are not counted as absences, so some recent attendance may be missing.</sub>
 
 **Technical snapshot:** source, development records, and selected tests reviewed on 2026-09-17. These notes describe the implementation in the repository; individual App Store builds may contain an earlier subset of it.
 
-[Member app](#member-app) · [Administrator app](#administrator-app) · [Bible permissions](#bible-text-permissions-and-66-book-delivery) · [Architecture](#system-structure) · [Engineering decisions](#engineering-decisions) · [Verification](#verification-in-the-repository)
+[Member app](#member-app) · [Admin web](#admin-web) · [Administrator app](#administrator-app) · [AI case: account merge](#ai-case-account-merge) · [Bible permissions](#bible-text-permissions-and-66-book-delivery) · [Architecture](#system-structure) · [Engineering decisions](#engineering-decisions) · [Verification](#verification-in-the-repository)
 
 ## Try the apps
 
-Install each app from the App Store. On the sign-in screen, choose **데모 계정으로 로그인** (Sign in with a demo account), then use the matching credentials below.
+Install each app from the App Store (the member app is also on [Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth)). On the sign-in screen, choose **데모 계정으로 로그인** (Sign in with a demo account), then use the matching credentials below.
 
 | App | Demo ID | Demo password | Start here |
 | --- | --- | --- | --- |
@@ -24,6 +39,7 @@ The demo uses shared sample data. Other visitors may change it, and changes may 
 ## Member app
 
 The member app connects everyday community activity with personal reflection and Bible reading.
+It ships from one Expo codebase to the [App Store](https://apps.apple.com/kr/app/id6797694035) and [Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth).
 These screens show monthly personal records and navigation into the licensed Bible text.
 
 <table>
@@ -66,6 +82,24 @@ the application's data and permission rules, with verification recorded separate
 implementation. Source records: `docs/guides/GENERAL_MEMBER_FAITH_GARDEN_2026_09_06.md`,
 `mobile/assets/faith-garden/README.md`, and `deliverables/bible-viewer/HANDOFF.md`.
 
+## Admin web
+
+The admin web handles the heavier management work that is easier at a desk: membership approvals, member records, and linking accounts. It uses its own administrator session with two-step verification and calls the same permission-checked API as the mobile clients (`app/admin/`, `app/api/`).
+
+### AI case: account merge
+
+**Situation.** The same member had signed in with two different OAuth providers (for example Kakao and Apple), so they had two accounts. Their roster record already held attendance history, and the admin web needed to merge the accounts without losing it.
+
+**What I delegated.** The account-merge feature in the admin web was implemented with an AI coding tool.
+
+**What failed.** Finding likely duplicate accounts worked. Running the merge did not: the accounts stayed separate, and attendance remained attached to the wrong account.
+
+**Cause.** The AI-generated merge treated the OAuth account as the unit and moved data from one account to another. Attendance, however, belongs to the roster record, not to the login account. Because the merge ignored where the data was actually attached, account fields moved while attendance stayed behind.
+
+**Fix: change the axis.** I rebuilt the merge around the **roster record as the single identity** for a person. Each OAuth account is merged in as a login method attached to that record. Attendance was already attached to the roster record, so it never has to move or be rewritten.
+
+**What changed in how I work.** Account and permission code is hard to undo when it goes wrong, so I no longer accept AI output there as-is; I edit and review it myself. AI handles clearly scoped screen work, and decisions about identity and permissions stay with me.
+
 ## Administrator app
 
 The native administrator app brings daily operations to iPhone and iPad. Its screens expose
@@ -91,7 +125,9 @@ not usage or impact metrics. [Capture details](../assets/screenshots/README.md).
 ### How I used AI — administrator app
 
 I used AI assistance for the **SwiftUI frontend**, including screen implementation and
-presentation. I defined the operational workflows and interface requirements.
+presentation. I defined the operational workflows and interface requirements. Sign-in and
+every return to the app require Face ID or Touch ID; this is separate from the admin web's
+two-step verification.
 
 ## Bible text permissions and 66-book delivery
 
@@ -262,7 +298,7 @@ The bookshelf test file was rerun as part of the 49 passing Jest tests below.
 Source/test anchors: `mobile/src/components/bible/BibleBookshelf.tsx`,
 `mobile/tests/bible-bookshelf.test.tsx`.
 Release record: `docs/guides/RELEASE_1_3_1_ANDROID_HOTFIX_2026_09_13.md`.
-The recorded Android submission was to a **closed Alpha track**.
+The hotfix was first submitted to a closed Alpha track. The member app is now publicly available on [Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth).
 
 ## Verification in the repository
 
@@ -324,7 +360,8 @@ node --test --test-reporter=tap \
 
 ## Public product links
 
-- [UP-Dream member app](https://apps.apple.com/kr/app/id6797694035)
+- [UP-Dream member app · App Store](https://apps.apple.com/kr/app/id6797694035)
+- [UP-Dream member app · Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth)
 - [UP-Dream administrator app](https://apps.apple.com/kr/app/id6810673532)
 - [Service website](https://updream.church)
 
