@@ -1,6 +1,6 @@
 # UP-Dream · Member app, admin web, admin app & shared backend
 
-[Profile](../README.md) · Member app: [App Store](https://apps.apple.com/kr/app/id6797694035) · [Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth) · Administrator app: [App Store](https://apps.apple.com/kr/app/id6810673532) · [Service website](https://updream.church)
+[Profile](../README.md) · Member app: [App Store](https://apps.apple.com/jp/app/id6797694035) · [Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth&hl=ja&gl=JP) · Administrator app: [App Store](https://apps.apple.com/jp/app/id6810673532) · [Service website](https://updream.church)
 
 I independently planned, designed, developed, released, and operate UP-Dream for a church youth group. It replaced a split setup — room bookings on a shared Naver calendar and communication in a KakaoTalk open chat — with one service for membership approval, attendance, announcements, schedules, room reservations, prayer requests, and Bible reading.
 
@@ -13,9 +13,9 @@ The service has four surfaces: a **member app** on iOS and Android, an **admin w
 | Admin app | iPhone · iPad | On-site work such as Sunday attendance | Swift · SwiftUI |
 | Shared API | AWS ECS Fargate | Sessions, permissions, business rules for every client | TypeScript · Supabase PostgreSQL · S3 |
 
-### Usage
+### Completed sign-ups
 
-Between 1 December 2025 and 3 November 2026 (48 Sunday youth services), **56 of the 114 people who attended at least once have a completed account (49.1%)**. Among regular attendees — 24 or more of the 48 services — **41 of 61 use the app (67.2%)**. Sign-up requires roster verification and administrator approval.
+Between 1 December 2025 and 3 November 2026 (48 Sunday youth services), **56 of the 114 people who attended at least once have a completed account (49.1%)**. Among regular attendees — 24 or more of the 48 services — **41 of 61 completed sign-up (67.2%)**. Sign-up requires roster verification and administrator approval.
 
 <sub>Counts are unique people, excluding pastors and test accounts, checked against completed sign-ups (required details and terms accepted). Attendance comes from records saved in the app; unrecorded weeks are not counted as absences, so some recent attendance may be missing.</sub>
 
@@ -25,12 +25,12 @@ Between 1 December 2025 and 3 November 2026 (48 Sunday youth services), **56 of 
 
 ## Try the apps
 
-Install each app from the App Store (the member app is also on [Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth)). On the sign-in screen, choose **데모 계정으로 로그인** (Sign in with a demo account), then use the matching credentials below.
+Install each app from the App Store (the member app is also on [Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth&hl=ja&gl=JP)). On the sign-in screen, choose **데모 계정으로 로그인** (Sign in with a demo account), then use the matching credentials below.
 
 | App | Demo ID | Demo password | Start here |
 | --- | --- | --- | --- |
-| [UP-Dream](https://apps.apple.com/kr/app/id6797694035) | `updream.app.review` | `ZYQw0tEyqiWOTSZ80k1gwDsXyTVSLaux` | Explore the home screen, gratitude entries, and reflection history. [Demo guide](https://yisuheon.dev/en/projects/updream/#demo) |
-| [UP-Dream Admin](https://apps.apple.com/kr/app/id6810673532) | `updream.admin.review` | `iSClZj1ZKzt5DKBDqmQsLN6lbIBFh3Vu` | Explore the operations overview, member directory, and attendance views. [Demo guide](https://yisuheon.dev/en/projects/updream-admin/#demo) |
+| [UP-Dream](https://apps.apple.com/jp/app/id6797694035) | `updream.app.review` | `ZYQw0tEyqiWOTSZ80k1gwDsXyTVSLaux` | Explore the home screen, gratitude entries, and reflection history. [Demo guide](https://yisuheon.dev/en/projects/updream/#demo) |
+| [UP-Dream Admin](https://apps.apple.com/jp/app/id6810673532) | `updream.admin.review` | `iSClZj1ZKzt5DKBDqmQsLN6lbIBFh3Vu` | Explore the operations overview, member directory, and attendance views. [Demo guide](https://yisuheon.dev/en/projects/updream-admin/#demo) |
 
 The demo uses shared sample data. Other visitors may change it, and changes may remain. Please do not enter real names, contact details, private prayer requests, or other personal information.
 
@@ -39,7 +39,7 @@ The demo uses shared sample data. Other visitors may change it, and changes may 
 ## Member app
 
 The member app connects everyday community activity with personal reflection and Bible reading.
-It ships from one Expo codebase to the [App Store](https://apps.apple.com/kr/app/id6797694035) and [Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth).
+It ships from one Expo codebase to the [App Store](https://apps.apple.com/jp/app/id6797694035) and [Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth&hl=ja&gl=JP).
 These screens show monthly personal records and navigation into the licensed Bible text.
 
 <table>
@@ -271,6 +271,8 @@ Source/test anchors: `admin-ios/UPDreamAdminTests/AttendanceExpansionTests.swift
 
 Source anchor: `app/api/attendance/_atomic-write.ts`.
 
+[Runnable TypeScript example and tests](../examples/attendance-versioning/) for the expected-version check.
+
 ### 3. Member app: recover sessions and refresh screen data safely
 
 **Problem:** a temporary connection failure during startup should not force a user to sign in again. During navigation, repeated requests add work, while retaining data indefinitely can preserve records from an old membership scope or role.
@@ -298,7 +300,7 @@ The bookshelf test file was rerun as part of the 49 passing Jest tests below.
 Source/test anchors: `mobile/src/components/bible/BibleBookshelf.tsx`,
 `mobile/tests/bible-bookshelf.test.tsx`.
 Release record: `docs/guides/RELEASE_1_3_1_ANDROID_HOTFIX_2026_09_13.md`.
-The hotfix was first submitted to a closed Alpha track. The member app is now publicly available on [Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth).
+The hotfix was first submitted to a closed Alpha track. The member app is now publicly available on [Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth&hl=ja&gl=JP).
 
 ## Verification in the repository
 
@@ -360,9 +362,9 @@ node --test --test-reporter=tap \
 
 ## Public product links
 
-- [UP-Dream member app · App Store](https://apps.apple.com/kr/app/id6797694035)
-- [UP-Dream member app · Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth)
-- [UP-Dream administrator app](https://apps.apple.com/kr/app/id6810673532)
+- [UP-Dream member app · App Store](https://apps.apple.com/jp/app/id6797694035)
+- [UP-Dream member app · Google Play](https://play.google.com/store/apps/details?id=kr.or.gimhaejeil.youth&hl=ja&gl=JP)
+- [UP-Dream administrator app](https://apps.apple.com/jp/app/id6810673532)
 - [Service website](https://updream.church)
 
 [Back to profile](../README.md)

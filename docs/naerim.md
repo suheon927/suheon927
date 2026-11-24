@@ -1,6 +1,6 @@
 # Naerim — Native Coffee Journal
 
-[← Back to profile](../README.md) · [View on the App Store](https://apps.apple.com/kr/app/id6808134502)
+[← Back to profile](../README.md) · [View on the App Store](https://apps.apple.com/jp/app/id6808134502)
 
 Naerim helps people record coffee brews, keep recipes, and compare the conditions behind each cup.
 I independently built and released the app, owning the product and its implementation.
